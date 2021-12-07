@@ -1,4 +1,4 @@
-# [FSMSim 🤖](https://vitorgt.github.io/FSMSim/trab.html)
+# [VinUni FSM Simulator 🤖]()
 
 The project consists of elaborating a system that graphically simulates a Finite State Machine described by the user, whether is it Mealy or Moore. It supports up to 8 states and from this it is able to generate the diagram that receives the input desired by the user at a given state.
 In the header it is possible to generate a report with the outputs generated in that FSM following the entries chosen and update the current state also according to the entry.
