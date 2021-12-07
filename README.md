@@ -46,30 +46,28 @@ The formatting used for the table should follow these rules: Each state must be 
 
 **Note that for Moore machines, outputs of equal future states must be equal.**
 
-[Demonstration](https://www.youtube.com/watch?v=RYh74JX02-o)
-
 Some input exemples can be found at `InputExemples.txt`.
 
 # Developers 👨‍💻
 
-Eduardo Alves Baratela - 10295270
+Nguyen Dinh Cuong - V202000025
 
-Fabio Fogarin Destro - 10284667
+Pham Duc Hiep - V20
 
-Paulo André de Oliveira Carneiro - 10295304
+Nguyen Phuong Thao Vy - V
 
-Vitor Henrique Gratiere Torres - 10284952
+Dau Vu Dang Khoi - V
 
-# SSC0118
+# MATH2020
 
-Digital Systems
+Discrete Mathematics
 
-Institute of Mathematical and Computer Sciences
+College of Engineering and Computer Science
 
-University of São Paulo
+VinUniversity
 
-Professor Mauricio Acconcia Dias
+Professor Nguyen Viet Tu
 
-2017.2
+2021
 
 # Have fun!
