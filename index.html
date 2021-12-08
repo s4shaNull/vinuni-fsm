@@ -1,55 +1,67 @@
 <!doctype html>
-<html lang="pt">
+<html>
 	<head>
 		<meta charset="utf-8">
-		<title>Site fera</title>
+		<title>🥇Main Project🥇</title>
 		<meta name="description" content="Sitezão fera">
-		<meta name="author" content="Eduardo Fabio Paulo Vitor">
+		<meta name="author" content="HP">
 		<link rel="stylesheet" href="style.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Lato:wght@300&family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
 		<script src="jquery.js"></script>
 		<script src="code.js"></script>
 	</head>
 	<body>
+		
 		<header>
-			<div id="cabe">
-				<div id="logo"><img src="logo.png"></img></div>
-				<h2>SIMULADOR DE MÁQUINAS DE ESTADO</h2>
-				<h4>Eduardo Baratela - Fabio Destro - Paulo Caneiro - Vitor Torres</h4>	
+			<div id="haed_main">
+				<!--- <div id="logo"><img src="logo.png"></img></div> --->
+				<h1 id="invis_header" >VinUni</h1>
+				<h1 id="main_header">FSM Simulator</h2>
+				<h3 id="main_header2" >VinUni - Turbo Turists</h4>	
 			</div>
 		</header>
 		<article>
 			<div id="conteudo">
 				<form>
 					<div id="op">
-						<h5>Escolha o tipo de máquina:</h5>
-						<input type="radio" name="tipo" value="0" checked>Mealy<br>
-						<input type="radio" name="tipo" value="1">Moore<br>
+						<table style="width:100%" id="table_content">
+							<tr>
+								<th>
+									<h5>Machine type: </h5>
+										<input type="radio" name="tipo" value="0" checked>Mealy<br>
+										<input type="radio" name="tipo" value="1">Moore<br>
+								</th>
+								<th>
+									<h5>Number of states:</h5>
+										<select>
+											<option value="1">2 states</option>
+											<option value="2">3 states</option>
+											<option value="3">4 states</option>
+											<option value="4">5 states</option>
+											<option value="5">6 states</option>
+											<option value="6">7 states</option>
+											<option value="7">8 states</option>
+										</select>
+								</th>
+							</tr>
+						</table>
+						
 					</div>
-					<hr/>
-					<div id="op2">
-						<h5>Número de estados:</h5>
-						<select>
-							<option value="1">2 estados</option>
-							<option value="2">3 estados</option>
-							<option value="3">4 estados</option>
-							<option value="4">5 estados</option>
-							<option value="5">6 estados</option>
-							<option value="6">7 estados</option>
-							<option value="7">8 estados</option>
-						</select>
-					</div>
+
 					<hr/>
 					<div id="op5">
-						<h5>Dados da tabela verdade:</h5>
-						<textarea name="tabelaVerdade" rows="20" cols="80" placeholder="Estado Atual | Entrada | Próximo Estado | Saída"></textarea> 
+						<h5>Truth table data:</h5>
+						<textarea name="tabelaVerdade" rows="20" cols="80" placeholder="Current State | Input | Next State | Output"></textarea> 
 					</div>
 					<br/>
 					<div id="op6">
-						<button class="btn" >Gerar simulação!</button>
+						<button class="btn" >Generate Simulation</button>
 					</div>
 					<br/>	 	 			
 				</form> 
-				<p style="font-size:11px">Obeservação: o simulador funciona com uma entrada e uma saida, ambos com 1 bit (0 ou 1) como representação.</p>
 				<p id="demo"></p>
 			</div>
 		</article>

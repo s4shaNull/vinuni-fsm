@@ -2,16 +2,11 @@
 	margin: 0;
 	padding: 0;
 }
-header {
-	color: #5ba4ba;
-	border-bottom: 1px solid #ccc;
-	height: 120px;
-	padding: 20px 0;
-	background-color: #eee;
-}
-#cabe {
-	width: 950px;
+
+#head_main {
+	width: 1200px;
 	margin: 0 auto;
+	padding-bottom: 100px;
 }
 #logo {
 	float: left;
@@ -19,11 +14,9 @@ header {
 #logo img {
 	width: 250px;
 }
-header h4 {
-	color: #000;
-}
+
 article {
-	width: 980px;
+	width: 850px;
 	margin: 0 auto;
 	border: 1px solid #ccc;
 	border-top: 0;
@@ -76,3 +69,44 @@ hr {
 	margin: 4px 2px;
 	cursor: pointer;
 }
+#table_content {
+	
+}
+body {
+	background-color: #eae7dc;
+}
+header {
+	text-align: center;
+	color: #e85a4f;
+	border-bottom: 1px solid #ccc;
+	height: 200px;
+	padding: 20px 0;
+	background-color: #eae7dc;
+}
+
+#invis_header {
+	opacity: 0.3;
+	color: #8e8d8a;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 70px;
+}
+
+#main_header {
+	text-align: center;
+	font-family: 'Advent Pro', sans-serif;
+	font-size: 105px;
+
+	margin-top: -60px;
+
+}
+#main_header2 {
+	text-align: center;
+	color: #e98074;
+	font-family: 'Lato', sans-serif;
+	font-size: 30px;
+}
+
+header h1 {
+}
+
+
