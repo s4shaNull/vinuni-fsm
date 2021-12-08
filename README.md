@@ -31,7 +31,7 @@ This would cause many arrows to be added, because there'd be the possibility tha
 
 # How to use
 
-[Open this link](https://s4shanull.github.io/vinuni-fsm/index.html) or clone or download this [project](https://github.com/vitorgt/FSMSim) then open `index.html`.
+[Open this link](https://s4shanull.github.io/vinuni-fsm/index.html) or clone or download this [project](https://github.com/s4shaNull/vinuni-fsm) then open `index.html`.
 
 The use of the system basically consists of the way in which the user must enter the information related to the desired state machine diagram, it is necessary to fill in the following data:
 
