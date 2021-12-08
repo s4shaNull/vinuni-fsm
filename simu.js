@@ -450,7 +450,7 @@ $(document).ready(function(){
 				randomCircle(ctx,'#a80000', mX(bpos[atu]), mY(bpos[atu]),40);
 				write();
 				if(!achou){
-					alert("Não há destino com a entrada 0 no estado atual");
+					alert("Não cá destino com a entrada 0 no estado atual");
 				}
 		});
 
@@ -468,7 +468,7 @@ $(document).ready(function(){
 				randomCircle(ctx,'#a80000', mX(bpos[atu]), mY(bpos[atu]),40);
 				write();
 				if(!achou){
-					alert("Não há destino com a entrada 1 no estado atual");
+					alert("Não cá destino com a entrada 1 no estado atual");
 				}
 		});
 
