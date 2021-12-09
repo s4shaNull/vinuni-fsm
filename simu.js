@@ -472,9 +472,9 @@ $(document).ready(function(){
 				}
 		});
 
-		// $("#btR").click(function(){
-		// 		alert("Relatorio:\nEstados: "+RelaEs+"\nEntradas: "+RelaIn+"\nSaidas: "+RelaOu);
-		// });
+		$("#btR").click(function(){
+				alert("Relatorio:\nEstados: "+RelaEs+"\nEntradas: "+RelaIn+"\nSaidas: "+RelaOu);
+		});
 
 		//window.location.reload(true);
 
