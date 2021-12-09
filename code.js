@@ -12,7 +12,7 @@ $(document).ready(function(){
 		
 		qtdEstados++;
 		
-		var tabela = $("textarea[name='tabelaVerdade']").val();
+		var tabela = $("textarea[name='text_area']").val();
 		var vetorTop = tabela.replace( /\n/g," ").split(" ");
 		for(var i = 0; i < vetorTop.length; i++){
 			vetorTop[i] = parseInt(vetorTop[i],10);
