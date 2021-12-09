@@ -385,28 +385,28 @@ $(document).ready(function(){
 			ctx.fillStyle  = '#000';
 			ctx.font = "20px Arial";
 			if(!prime){
-				ctx.fillText("Estado anterior: "+nproc[i],1150,100);
-				ctx.fillText("Estado atual: "+nproc[i+2],1150,130);
-				ctx.fillText("Saida: "+nproc[i+3],1150,160);
+				ctx.fillText("Previous State: "+nproc[i],1150,100);
+				ctx.fillText("Current State: "+nproc[i+2],1150,130);
+				ctx.fillText("Output: "+nproc[i+3],1150,160);
 				RelaEs.push(nproc[i+2]);
 				RelaIn.push(nproc[i+1]);
 				RelaOu.push(nproc[i+3]);
 			}
 			else{
-				ctx.fillText("Estado anterior: ",1150,100);
-				ctx.fillText("Estado atual: 1",1150,130);
+				ctx.fillText("Previous State: ",1150,100);
+				ctx.fillText("Current State: 1",1150,130);
 				RelaEs.push(1);
 				if(tipo == 1){
 					for(i = 0; i < nproc.length; i += 4){
 						if(nproc[i+2] == 1){
-							ctx.fillText("Saida: "+nproc[i+3],1150,160);
+							ctx.fillText("Output: "+nproc[i+3],1150,160);
 							RelaOu.push(nproc[i+3]);
 							break;
 						}
 					}
 				}
 				else{
-					ctx.fillText("Saida: ",1150,160);
+					ctx.fillText("Output: ",1150,160);
 				}
 			}
 			ctx.font = "20px Arial";
