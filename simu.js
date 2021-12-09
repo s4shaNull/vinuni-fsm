@@ -3,26 +3,26 @@ $(document).ready(function(){
 
 		var bpos = [0, Math.PI/4, Math.PI/2, 3*Math.PI/4, Math.PI, 5*Math.PI/4, 6*Math.PI/4, 7*Math.PI/4];
 		var ctx = document.querySelector('canvas').getContext('2d');
-		var main_type = parseInt(localStorage.getItem("main_typeMaquina"));
+		var main_type = parseInt(localStorage.getItem("main_typeMachine"));
 		var qtdEst = localStorage.getItem("qtdEst");
-		var vetorTop = localStorage.getItem("vetTop");
-		var dumb = [-1,-1,-1,-1,-1,-1,-1,-1,-1], dumb2 = [-1,-1,-1,-1,-1,-1,-1,-1,-1]
+		var vectorTop = localStorage.getItem("vetTop");
+		var dummy = [-1,-1,-1,-1,-1,-1,-1,-1,-1], dummy2 = [-1,-1,-1,-1,-1,-1,-1,-1,-1]
 		var est = [0,0,0,0,0,0,0,0];
 		var ze = [0,0,0,0,0,0,0,0,0];
 		var um = [0,0,0,0,0,0,0,0,0];
-		var proc = new Array(Math.ceil(vetorTop.length/2));
+		var proc = new Array(Math.ceil(vectorTop.length/2));
 		var cont = 0;
-		for(var a = 0; a < vetorTop.length; a++){
-			if(vetorTop[a] != ","){
-				proc[cont++] = vetorTop[a];
+		for(var a = 0; a < vectorTop.length; a++){
+			if(vectorTop[a] != ","){
+				proc[cont++] = vectorTop[a];
 			}
 		}
-		var qest = parseInt(qtdEst);
+		var q_state = parseInt(qtdEst);
 		var nproc = proc.slice(0);
 		var atu;
-		var RelaEs = [];
-		var RelaIn = [];
-		var RelaOu = [];
+		var report_state = [];
+		var report_input = [];
+		var report_output = [];
 		var i, j;
 
 		h2can = 605 - 0.2*605;
@@ -31,7 +31,7 @@ $(document).ready(function(){
 		ctx.font = "20px Arial";
 		ctx.lineWidth = 2;
 
-		if(qest == 1){
+		if(q_state == 1){
 			alert("Try again");
 			window.stop();
 		}
@@ -42,28 +42,28 @@ $(document).ready(function(){
 			else if(nproc[i+1] == 0){
 				ze[nproc[i]]++;
 			}
-			dumb2[nproc[i]]++;
-			if(dumb2[nproc[i]] > 1){
+			dummy2[nproc[i]]++;
+			if(dummy2[nproc[i]] > 1){
 				alert("Try again");
 				window.stop();
 			}
-			if(dumb[nproc[i+2]] == -1){
-				dumb[nproc[i+2]] = nproc[i+3];
+			if(dummy[nproc[i+2]] == -1){
+				dummy[nproc[i+2]] = nproc[i+3];
 			}
 			else{
-				if(dumb[nproc[i+2]] != nproc[i+3] && main_type){
+				if(dummy[nproc[i+2]] != nproc[i+3] && main_type){
 					alert("Try again");
 					window.stop();
 				}
 			}
 		}
 
-		if(qest == 3 | qest == 5 | qest == 8){
+		if(q_state == 3 | q_state == 5 | q_state == 8){
 			est[0] = randomCircle(ctx,'#a80000', mX(bpos[0]), mY(bpos[0]),40);
 			atu = 0;
 		}
-		if(qest == 4 | qest == 6 | qest == 7 | qest == 8){
-			if(qest == 8){
+		if(q_state == 4 | q_state == 6 | q_state == 7 | q_state == 8){
+			if(q_state == 8){
 				est[1] = randomCircle(ctx,'#999', mX(bpos[1]), mY(bpos[1]),40);
 			}
 			else{
@@ -71,8 +71,8 @@ $(document).ready(function(){
 				atu = 1;
 			}
 		}
-		if(qest == 2 | qest == 5 | qest == 6 | qest == 7 | qest == 8){
-			if(qest == 2){
+		if(q_state == 2 | q_state == 5 | q_state == 6 | q_state == 7 | q_state == 8){
+			if(q_state == 2){
 				est[2] = randomCircle(ctx,'#a80000', mX(bpos[2]), mY(bpos[2]),40);
 				atu = 2;
 			}
@@ -80,29 +80,29 @@ $(document).ready(function(){
 				est[2] = randomCircle(ctx,'#999', mX(bpos[2]), mY(bpos[2]),40);
 			}
 		}
-		if(qest == 3 | qest == 4 | qest == 6 | qest == 7 | qest == 8){
+		if(q_state == 3 | q_state == 4 | q_state == 6 | q_state == 7 | q_state == 8){
 			est[3] = randomCircle(ctx,'#999', mX(bpos[3]), mY(bpos[3]),40);
 		}
-		if(qest == 5 | qest == 7 | qest == 8){
+		if(q_state == 5 | q_state == 7 | q_state == 8){
 			est[4] = randomCircle(ctx,'#999', mX(bpos[4]), mY(bpos[4]),40);
 		}
-		if(qest == 3 | qest == 4 | qest == 6 | qest == 7 | qest == 8){
+		if(q_state == 3 | q_state == 4 | q_state == 6 | q_state == 7 | q_state == 8){
 			est[5] = randomCircle(ctx,'#999', mX(bpos[5]), mY(bpos[5]),40);
 		}
-		if(qest == 2 | qest == 5 | qest == 6 | qest == 7 | qest == 8){
+		if(q_state == 2 | q_state == 5 | q_state == 6 | q_state == 7 | q_state == 8){
 			est[6] = randomCircle(ctx,'#999', mX(bpos[6]), mY(bpos[6]),40);
 		}
-		if(qest == 4 | qest == 5 | qest == 6 | qest == 7 | qest == 8){
+		if(q_state == 4 | q_state == 5 | q_state == 6 | q_state == 7 | q_state == 8){
 			est[7] = randomCircle(ctx,'#999', mX(bpos[7]), mY(bpos[7]),40);
 		}
 
 		for(i = 1; i < 10; i++){
-			if(dumb2[i] > -1){
-				dumb2[i] = randomCircle(ctx,'#eee', 100, (i-1)*74+36,20);
+			if(dummy2[i] > -1){
+				dummy2[i] = randomCircle(ctx,'#eee', 100, (i-1)*74+36,20);
 				ctx.fillText(""+i, 95, (i-1)*74+41);
 				if(ze[i] == 1){
 					ze[i] = randomCircle(ctx,'#eee', 190, (i-1)*75+17,15);
-					arrow(ctx,dumb2[i],ze[i],10,1,0);
+					arrow(ctx,dummy2[i],ze[i],10,1,0);
 					ctx.font = "15px Arial";
 					ctx.fillText("0", 130, (i-1)*75+20,15);
 					for(j = 0; j < nproc.length; j +=4){
@@ -118,7 +118,7 @@ $(document).ready(function(){
 				}
 				if(um[i] == 1){
 					um[i] = randomCircle(ctx,'#eee', 190, (i-1)*75+51,15);
-					arrow(ctx,dumb2[i],um[i],10,1,0);
+					arrow(ctx,dummy2[i],um[i],10,1,0);
 					ctx.font = "15px Arial";
 					ctx.fillText("1", 130, (i-1)*75+59,15);
 					for(j = 0; j < nproc.length; j +=4){
@@ -137,7 +137,7 @@ $(document).ready(function(){
 
 		ctx.fillStyle = ctx.strokeStyle = '#5ba4ba';
 
-		if(qest == 2){
+		if(q_state == 2){
 			for(i = 0; i < proc.length; i += 2){
 				if(proc[i] == 1)
 					proc[i] = 2;
@@ -147,7 +147,7 @@ $(document).ready(function(){
 			write();
 			arrows();
 		}
-		if(qest == 3){
+		if(q_state == 3){
 			for(i = 0; i < proc.length; i += 2){
 				if(proc[i] == 1)
 					proc[i] = 0;
@@ -159,7 +159,7 @@ $(document).ready(function(){
 			write();
 			arrows();
 		}
-		if(qest == 4){
+		if(q_state == 4){
 			for(i = 0; i < proc.length; i += 2){
 				if(proc[i] == 1)
 					proc[i] = 1;
@@ -173,7 +173,7 @@ $(document).ready(function(){
 			write();
 			arrows();
 		}
-		if(qest == 5){
+		if(q_state == 5){
 			for(i = 0; i < proc.length; i += 2){
 				if(proc[i] == 1)
 					proc[i] = 0;
@@ -189,7 +189,7 @@ $(document).ready(function(){
 			write();
 			arrows();
 		}
-		if(qest == 6){
+		if(q_state == 6){
 			for(i = 0; i < proc.length; i += 2){
 				if(proc[i] == 1)
 					proc[i] = 1;
@@ -207,11 +207,11 @@ $(document).ready(function(){
 			write();
 			arrows();
 		}
-		if(qest == 7){
+		if(q_state == 7){
 			write();
 			arrows();
 		}
-		if(qest == 8){
+		if(q_state == 8){
 			for(i = 0; i < proc.length; i += 2){
 				proc[i]--;
 			}
@@ -388,19 +388,19 @@ $(document).ready(function(){
 				ctx.fillText("Previous State: "+nproc[i],1150,100);
 				ctx.fillText("Current State: "+nproc[i+2],1150,130);
 				ctx.fillText("Output: "+nproc[i+3],1150,160);
-				RelaEs.push(nproc[i+2]);
-				RelaIn.push(nproc[i+1]);
-				RelaOu.push(nproc[i+3]);
+				report_state.push(nproc[i+2]);
+				report_input.push(nproc[i+1]);
+				report_output.push(nproc[i+3]);
 			}
 			else{
 				ctx.fillText("Previous State: ",1150,100);
 				ctx.fillText("Current State: 1",1150,130);
-				RelaEs.push(1);
+				report_state.push(1);
 				if(main_type == 1){
 					for(i = 0; i < nproc.length; i += 4){
 						if(nproc[i+2] == 1){
 							ctx.fillText("Output: "+nproc[i+3],1150,160);
-							RelaOu.push(nproc[i+3]);
+							report_output.push(nproc[i+3]);
 							break;
 						}
 					}
@@ -473,7 +473,7 @@ $(document).ready(function(){
 		});
 
 		$("#btR").click(function(){
-				alert("Result:\nStates: "+RelaEs+"\nInputs: "+RelaIn+"\nOutputs: "+RelaOu);
+				alert("Result:\nStates: "+report_state+"\nInputs: "+report_input+"\nOutputs: "+report_output);
 		});
 
 		//window.location.reload(true);
