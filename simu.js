@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 		var bpos = [0, Math.PI/4, Math.PI/2, 3*Math.PI/4, Math.PI, 5*Math.PI/4, 6*Math.PI/4, 7*Math.PI/4];
 		var ctx = document.querySelector('canvas').getContext('2d');
-		var tipo = parseInt(localStorage.getItem("tipoMaquina"));
+		var main_type = parseInt(localStorage.getItem("main_typeMaquina"));
 		var qtdEst = localStorage.getItem("qtdEst");
 		var vetorTop = localStorage.getItem("vetTop");
 		var dumb = [-1,-1,-1,-1,-1,-1,-1,-1,-1], dumb2 = [-1,-1,-1,-1,-1,-1,-1,-1,-1]
@@ -51,7 +51,7 @@ $(document).ready(function(){
 				dumb[nproc[i+2]] = nproc[i+3];
 			}
 			else{
-				if(dumb[nproc[i+2]] != nproc[i+3] && tipo){
+				if(dumb[nproc[i+2]] != nproc[i+3] && main_type){
 					alert("Try again");
 					window.stop();
 				}
@@ -107,7 +107,7 @@ $(document).ready(function(){
 					ctx.fillText("0", 130, (i-1)*75+20,15);
 					for(j = 0; j < nproc.length; j +=4){
 						if(nproc[j] == i && nproc[j+1] == 0){
-							if(!tipo){
+							if(!main_type){
 								ctx.fillText("/"+nproc[j+3], 140, (i-1)*75+20,15);
 							}
 							ctx.fillText(""+nproc[j+2], 185, (i-1)*75+21,15);
@@ -123,7 +123,7 @@ $(document).ready(function(){
 					ctx.fillText("1", 130, (i-1)*75+59,15);
 					for(j = 0; j < nproc.length; j +=4){
 						if(nproc[j] == i && nproc[j+1] == 1){
-							if(!tipo){
+							if(!main_type){
 								ctx.fillText("/"+nproc[j+3], 140, (i-1)*75+59,15);
 							}
 							ctx.fillText(""+nproc[j+2], 185, (i-1)*75+56,15);
@@ -363,7 +363,7 @@ $(document).ready(function(){
 		function write(){
 			for(i = 0; i < proc.length; i += 4){
 				ctx.fillStyle  = '#000';
-				if(tipo){
+				if(main_type){
 					ctx.fillText(""+nproc[i],est[proc[i]].x-5,est[proc[i]].y-5);
 					ctx.fillText("___",est[proc[i]].x-15,est[proc[i]].y-1);
 					ctx.fillText(""+nproc[i+3],est[proc[i+2]].x-5,est[proc[i+2]].y+22);
@@ -396,7 +396,7 @@ $(document).ready(function(){
 				ctx.fillText("Previous State: ",1150,100);
 				ctx.fillText("Current State: 1",1150,130);
 				RelaEs.push(1);
-				if(tipo == 1){
+				if(main_type == 1){
 					for(i = 0; i < nproc.length; i += 4){
 						if(nproc[i+2] == 1){
 							ctx.fillText("Output: "+nproc[i+3],1150,160);
@@ -450,7 +450,7 @@ $(document).ready(function(){
 				randomCircle(ctx,'#a80000', mX(bpos[atu]), mY(bpos[atu]),40);
 				write();
 				if(!achou){
-					alert("Não cá destino com a entrada 0 no estado atual");
+					alert("Fish brain");
 				}
 		});
 
@@ -468,12 +468,12 @@ $(document).ready(function(){
 				randomCircle(ctx,'#a80000', mX(bpos[atu]), mY(bpos[atu]),40);
 				write();
 				if(!achou){
-					alert("Não cá destino com a entrada 1 no estado atual");
+					alert("Fish brain");
 				}
 		});
 
 		$("#btR").click(function(){
-				alert("Relatorio:\nEstados: "+RelaEs+"\nEntradas: "+RelaIn+"\nSaidas: "+RelaOu);
+				alert("Result:\nStates: "+RelaEs+"\nInputs: "+RelaIn+"\nOutputs: "+RelaOu);
 		});
 
 		//window.location.reload(true);

@@ -2,13 +2,13 @@ $(document).ready(function(){
 	
 	$(".btn").click(function(){
 		
-		var tipoEstado = parseInt($("input[name='tipo']:checked").val());
+		var main_typeEstado = parseInt($("input[name='main_type']:checked").val());
 		var qtdEstados = parseInt($("option:selected").val());
-		var qtdEntradas = parseInt("1");
+		var qtdmain_inputs = parseInt("1");
 		var qtdSaidas = parseInt("1");
 		
 		var tp = "Mealy";
-		if(tipoEstado == 1) tp = "Moore";
+		if(main_typeEstado == 1) tp = "Moore";
 		
 		qtdEstados++;
 		
@@ -18,7 +18,7 @@ $(document).ready(function(){
 			vetorTop[i] = parseInt(vetorTop[i],10);
 		}
 		
-		localStorage.setItem("tipoMaquina",tipoEstado);
+		localStorage.setItem("main_typeMaquina",main_typeEstado);
 		localStorage.setItem("qtdEst",qtdEstados);
 		localStorage.setItem("vetTop",vetorTop);
 		window.open("simulation.html");
