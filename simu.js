@@ -32,7 +32,7 @@ $(document).ready(function(){
 		ctx.lineWidth = 2;
 
 		if(qest == 1){
-			alert("Operação Inválida");
+			alert("Try again");
 			window.stop();
 		}
 		for(i = 0; i < nproc.length; i += 4){
@@ -44,7 +44,7 @@ $(document).ready(function(){
 			}
 			dumb2[nproc[i]]++;
 			if(dumb2[nproc[i]] > 1){
-				alert("Operação Inválida\nDois caminhos possiveis com a mesma entrada");
+				alert("Try again");
 				window.stop();
 			}
 			if(dumb[nproc[i+2]] == -1){
@@ -52,7 +52,7 @@ $(document).ready(function(){
 			}
 			else{
 				if(dumb[nproc[i+2]] != nproc[i+3] && tipo){
-					alert("Operação Inválida\nUm estado com duas saidas diferentes em Tipo Moore");
+					alert("Try again");
 					window.stop();
 				}
 			}
@@ -472,9 +472,9 @@ $(document).ready(function(){
 				}
 		});
 
-		$("#btR").click(function(){
-				alert("Relatorio:\nEstados: "+RelaEs+"\nEntradas: "+RelaIn+"\nSaidas: "+RelaOu);
-		});
+		// $("#btR").click(function(){
+		// 		alert("Relatorio:\nEstados: "+RelaEs+"\nEntradas: "+RelaIn+"\nSaidas: "+RelaOu);
+		// });
 
 		//window.location.reload(true);
 

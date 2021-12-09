@@ -3,6 +3,10 @@
 	padding: 0;
 }
 
+h5 {
+	color: #8e8d8a;
+}
+
 #head_main {
 	width: 1200px;
 	margin: 0 auto;
@@ -70,8 +74,22 @@ hr {
 	cursor: pointer;
 }
 #table_content {
-	
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+
+
 }
+
+#type_button {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	color: #e98074;
+}
+
+#state_option {
+	color: #e98074;
+}
+
 body {
 	background-color: #eae7dc;
 }
@@ -85,10 +103,10 @@ header {
 }
 
 #invis_header {
-	opacity: 0.3;
+	opacity: 0.2;
 	color: #8e8d8a;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 70px;
+	font-size: 80px;
 }
 
 #main_header {
