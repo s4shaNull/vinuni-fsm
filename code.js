@@ -21,7 +21,7 @@ $(document).ready(function(){
 		localStorage.setItem("tipoMaquina",tipoEstado);
 		localStorage.setItem("qtdEst",qtdEstados);
 		localStorage.setItem("vetTop",vetorTop);
-		window.open("simulacao.html");
+		window.open("simulation.html");
 		
 	});
 	
