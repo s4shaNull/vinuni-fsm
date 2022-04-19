@@ -3,3 +3,4 @@ The project consists of elaborating a system that graphically simulates a Finite
 
 ## Demo
 ![image](https://user-images.githubusercontent.com/84661482/164026545-148fa717-4722-45af-a72b-123bcda3ec0c.png)
+![image](https://user-images.githubusercontent.com/84661482/164027704-00ebf944-5e7e-4ebe-b73a-50dba693f0be.png)
